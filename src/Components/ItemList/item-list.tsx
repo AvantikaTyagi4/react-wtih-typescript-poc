@@ -81,9 +81,18 @@ export default function StickyHeadTable() {
     setPage(0);
   };
 
+  const handleLogout =()=>{
+    localStorage.setItem('user','false');
+    window.location.href='/login';
+  }
   return (
     <Container>
       <Paper sx={{ width: "100%", overflow: "hidden", marginTop: "40px" }}>
+      <Stack direction="row"  justifyContent="flex-end"  onClick={handleLogout}>
+      <Button variant="contained" style={{ margin: "20px" }}>
+              Logout
+            </Button>
+            </Stack>
         <Stack direction="row">
           <Typography
             variant="h6"

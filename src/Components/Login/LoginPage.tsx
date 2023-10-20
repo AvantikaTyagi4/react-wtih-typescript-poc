@@ -105,7 +105,8 @@ const Login = () => {
             type: "loginSuccess",
             payload: "Login Successfully",
           });
-          window.location.href='/itemList';
+          localStorage.setItem("user", "true");
+          window.location.href = "/itemList";
           console.log(response.data);
         } else {
           dispatch({
