@@ -106,7 +106,7 @@ const Login = () => {
             payload: "Login Successfully",
           });
           localStorage.setItem("user", "true");
-          window.location.href = "/itemList";
+          window.location.href = "/dashboard/itemList";
           console.log(response.data);
         } else {
           dispatch({
